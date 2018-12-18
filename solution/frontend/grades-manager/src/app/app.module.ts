@@ -4,17 +4,24 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
+import { OverviewComponent } from './pages/overview/overview.component';
+import { AuthService } from './service/auth/auth.service';
+import { StateService } from './service/auth/state.service';
+import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './service/auth/auth.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    OverviewComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService, StateService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
