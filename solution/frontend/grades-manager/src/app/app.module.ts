@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { OverviewComponent } from './pages/overview/overview.component';
 import { AuthService } from './service/auth/auth.service';
-import { StateService } from './service/auth/state.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthGuard } from './service/auth/auth.guard';
 
@@ -21,7 +20,7 @@ import { AuthGuard } from './service/auth/auth.guard';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [AuthService, StateService, AuthGuard],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

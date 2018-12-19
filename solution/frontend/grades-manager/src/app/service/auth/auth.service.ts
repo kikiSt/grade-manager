@@ -15,6 +15,11 @@ export class AuthService  {
   ) {}
 
   async LoginUser(username: string, password: string) {
-    return await this.http.get<User>(this.backendroute + '/user').toPromise<User>();
+    let user: User = await this.http.get<User>(this.backendroute + '/user').toPromise<User>();
+    if(user) {
+      localStorage.setItem('currentUser', user.GivenName);
+    } else {
+      localStorage.setItem('currentUser', undefined);
+    }
   }
 }
