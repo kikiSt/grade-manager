@@ -1,0 +1,16 @@
+@font-face {
+  font-family: 'Sarabun-Regular';
+  src: url('./assets/fonts/sarabun/Sarabun-Regular.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Sarabun-Regular';
+}
+
+html {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
