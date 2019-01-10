@@ -1,0 +1,29 @@
+@import '../../shared/styles/colors/colors.scss';
+@import '../../shared/styles/font-size/font-size.scss';
+
+$BLUR_BORDER: rgb(105, 108, 112);
+
+@mixin border {
+  border: none;
+  border-bottom: 1px solid $BLUR_BORDER;
+  outline: none;
+
+  &:focus {
+    border-bottom: 1px solid $PRIMARY_COLOR;
+  }
+
+  @media screen and (max-width: 2000px) {
+    border-bottom: 2px solid $BLUR_BORDER;
+
+    &:focus {
+      border-bottom: 2px solid $PRIMARY_COLOR;
+    }
+  }
+}
+
+.gm-input {
+  @include border;
+  @include font(20);
+
+  color: $PRIMARY_COLOR;
+}
