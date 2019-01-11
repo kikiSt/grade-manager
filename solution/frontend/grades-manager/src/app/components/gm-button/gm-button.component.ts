@@ -12,7 +12,6 @@ export class GmButtonComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  	console.log(this.modifier);
   }
 
 }

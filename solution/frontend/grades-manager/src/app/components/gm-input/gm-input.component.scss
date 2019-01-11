@@ -23,7 +23,8 @@ $BLUR_BORDER: rgb(105, 108, 112);
 
 .gm-input {
   @include border;
-  @include font(20);
 
-  color: $PRIMARY_COLOR;
+  font-size: 18px;
+  color: black;
+  width: 100%;
 }

@@ -1,0 +1,67 @@
+@import '../../shared/styles/colors/colors.scss';
+@import '../../shared/styles/font-size/font-size.scss';
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $PRIMARY_COLOR;
+}
+
+.login-modal {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+
+	box-shadow: 0 1px 3px rgba(0,0,0,0.22), 0 1px 2px rgba(0,0,0,0.24);
+	padding: 20px;
+	height: 30%;
+	width: 30%;
+	min-width: 340px;
+
+	@media(max-width: 600px) {
+		box-shadow: none;
+		width: 95%;
+		height: fit-content;
+	}
+}
+
+.header-text {
+	font-size: 28px;
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	flex: 1;
+}
+
+.form-row {
+	width: 100%;
+	&:not(:last-child) {
+		margin-bottom: 15px;
+	}
+	gm-input {
+		width: 100%;
+	}
+}
+
+.descriptor{
+	font-size: 20px;
+}
+
+footer {
+	flex: 0 0 30px;
+	display: flex;
+	margin-top: 10px;
+	justify-content: center;
+}
+
+gm-input {
+	width: 80%;
+}

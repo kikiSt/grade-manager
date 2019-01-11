@@ -5,12 +5,15 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Sarabun-Regular';
+  font-family: Arial, 'Sarabun-Regular';
 }
 
 html {
+  height: 100%;
+  
   body {
     margin: 0;
     padding: 0;
+    height: 100%;
   }
 }

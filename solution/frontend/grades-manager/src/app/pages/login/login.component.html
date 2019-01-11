@@ -1,3 +1,24 @@
-<section>
-	<gm-button [text]="'Bestätigen'" [modifier]="'tile'"></gm-button>
+<section class="wrapper">
+	<section class="login-modal">
+		<header class="login-header">
+			<h1 class="header-text">Grades-Manager Login</h1>
+		</header>
+		<article class="form">
+			<div class="form-row">
+				<label class="descriptor">
+					Mail
+				</label>
+				<gm-input [inputValue]="username" (gmValue)="username = $event" [inputtype]="'email'"></gm-input>
+			</div>
+			<div class="form-row">
+				<label class="descriptor">
+					Passwort
+				</label>
+				<gm-input [inputValue]="password" (gmValue)="password = $event" [inputtype]="'password'"></gm-input>
+			</div>
+		</article>
+		<footer>
+			<gm-button [modifier]="''" [text]="'Bestätigen'"></gm-button>
+		</footer>
+	</section>
 </section>
